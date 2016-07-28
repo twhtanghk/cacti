@@ -1,1 +1,5 @@
 Please view "docs/README" for more information.
+
+Run cmd below to import default cacti database if not created before:
+  docker exec -it cacti bash
+  mysql -h cacti_mysql -u user -p cacti <cacti.sql
