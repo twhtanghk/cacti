@@ -13,7 +13,7 @@ RUN tar --strip-components=1 -xzf /tmp/${ARCHIVE} && \
 	useradd cactiuser && \
         cp php.ini /usr/local/etc/php/ && \
 	cp crontab /var/spool/cron/crontabs/cactiuser && \
-	chown cactiuser /var/spool/cron/crontabls/cactiuser && \
+	chown cactiuser.crontab /var/spool/cron/crontabs/cactiuser && \
 	chown -R cactiuser rra log && \
 	ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h && \
 	docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
