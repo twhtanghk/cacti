@@ -21,5 +21,6 @@ services:
     ports:
       - 80
     volumes:
+      - ${COMPOSEROOT}/cacti/conf/php.ini:/usr/local/etc/php/php.ini
       - ${COMPOSEROOT}/cacti/conf/config.php:/var/www/html/cacti/include/config.php
     env_file: .env
