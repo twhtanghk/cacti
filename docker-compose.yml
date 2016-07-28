@@ -1,7 +1,7 @@
 version: '2'
 services:
   cacti_mysql:
-    image: million12/mariadb
+    image: mariadb
     container_name: cacti_mysql
     hostname: cacti_mysql
     ports:
