@@ -19,3 +19,5 @@ RUN tar --strip-components=1 -xzf /tmp/${ARCHIVE} && \
 	docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
 	docker-php-ext-install pdo pdo_mysql sockets snmp gd gmp ldap
 EXPOSE 80
+
+ENTRYPOINT ./entrypoint.sh
