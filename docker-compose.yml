@@ -7,7 +7,7 @@ services:
     ports:
       - 3306
     volumes:
-      - ${COMPOSEROOT}/cacti/data:/var/lib/mysql
+      - ${COMPOSEROOT}/cacti/data/mysql:/var/lib/mysql
     env_file: .env
 
   cacti:
@@ -23,4 +23,5 @@ services:
     volumes:
       - ${COMPOSEROOT}/cacti/conf/php.ini:/usr/local/etc/php/php.ini
       - ${COMPOSEROOT}/cacti/conf/config.php:/var/www/html/cacti/include/config.php
+      - ${COMPOSEROOT}/cacti/data/rra:/var/www/html/cacti/rra
     env_file: .env
